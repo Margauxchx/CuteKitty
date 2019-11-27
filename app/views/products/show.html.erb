@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <br></br>
 <div class="text-center">
 <h1 >Bienvenue sur la page du chaton n° <%= @item_id %> </h1></div>
@@ -18,8 +20,7 @@
     <li class="list-group-item">Cras justo odio</li>
   </ul>
   <ul>
-    <%= button_to "Ajouter au panier", line_items_path(@item_id), class: "btn btn-primary" %>
+    <%= button_to "Ajouter au panier", line_items_path(:product_id => product.id), class: "btn btn-primary", params:{productID: product.id}%>
   </ul>
-			</div>
-		</div>
+		
 <br><br>

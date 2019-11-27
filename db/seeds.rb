@@ -1,16 +1,15 @@
 require 'faker'
 
-Item.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('items')
+#Item.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('products')
 
-20.times do 
-  item = Item.create!(
-    title: Faker::Creature::Animal.name,
-    description: Faker::Lorem.paragraph_by_chars,
-    price: Faker::Number.decimal(l_digits: 2),
-    image_url:["image1","image2","image3","image4"].sample)
-  
-end
+
+product1 = Product.create({:title=>"tomato", :price => 1})
+product2 = Product.create({:title=>"milk", :price => 3})
+product3 = Product.create({:title=>"bread", :price => 5.50})
+product4 = Product.create({:title=>"bacon", :price => 10})
+product5 = Product.create({:title=>"cheese", :price => 3.20})
+product6 = Product.create({:title=>"molohia", :price => 15.20})
 
 puts "C'est fait"
 

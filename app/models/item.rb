@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+  has_many :line_items, dependent: :nullify
   validates :title, presence: true,
            length: {minimum: 2}
   validates :description, presence: true,
