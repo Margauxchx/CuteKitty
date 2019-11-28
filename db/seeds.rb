@@ -26,7 +26,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('items')
 
 20.times do 
   item = Item.create!(
-    title: Faker::Creature::Animal.name,
+    title: Faker::Creature::Cat.name,
     description: Faker::Lorem.paragraph_by_chars,
     price: Faker::Number.decimal(l_digits: 2),
     image_url: image_url.sample)
