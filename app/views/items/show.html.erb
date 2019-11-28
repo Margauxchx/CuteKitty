@@ -18,7 +18,10 @@
     <li class="list-group-item">Cras justo odio</li>
   </ul>
   <ul>
-    <%= button_to "Ajouter au panier", line_items_path(@item_id), class: "btn btn-primary" %>
+  <div class="input-group-append">
+  <%= f.hidden_field :product_id, value: @product.id %>
+  <%= f.submit "Add to Cart", class: "btn btn-outline-primary" %>
+</div>
   </ul>
 			</div>
 		</div>
